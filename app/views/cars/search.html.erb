@@ -1,0 +1,7 @@
+<h1>Resultados da busca</h1>
+
+<ul>
+  <% @cars.each do |cars| %>
+    <%= link_to cars.modelo, cars %>
+  <% end %>
+</ul>

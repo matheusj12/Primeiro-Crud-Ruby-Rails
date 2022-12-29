@@ -42,6 +42,15 @@ class CarsController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
+  
+  def search 
+    if params[:modelo].present?
+    @cars = Car.where("modelo LIKE ?" , "%#{params[:modelo]}%")
+    else
+      @cars = Car.all
+    end
+  end
+
   private
   def car_params
     params.require(:car).permit(:modelo, :marca, :ano, :ano_modelo)
