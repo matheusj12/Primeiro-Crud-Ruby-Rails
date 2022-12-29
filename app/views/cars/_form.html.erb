@@ -1,0 +1,22 @@
+<%= form_with model: @car do |form| %>
+  <div>
+    <%= form.label :modelo %><br>
+    <%= form.text_field :modelo %>
+  </div>
+  <div>
+    <%= form.label :marca %><br>
+    <%= form.text_field :marca %>
+  </div>
+  <div>
+    <%= form.label :ano %><br>
+    <%= form.text_field :ano %>
+  </div>
+  <div>
+    <%= form.label :ano_modelo %><br>
+    <%= form.text_field :ano_modelo %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
